@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Roman Numeral Converter</title>
+  </head>
+  <body>
+    <div class="container-fluid pt-3 px-3 d-flex flex-column">
+      <h1>Roman Numeral Converter</h1>
+
+      <div class="flex-fill">
+        <p>
+          Enter a value between 1 to 9999 to convert to roman numeral.
+        </p>
+
+        <form class="form-inline">
+          <input type="text" class="form-control mr-3" pattern="[0-9]*" maxlength="4" autofocus required>
+          <button type="submit" class="btn btn-primary mt-3 mt-sm-0">Convert to Roman Numeral</button>
+        </form>
+
+        <div class="my-3">
+          <button id="clear" class="btn btn-secondary">Clear History</button>
+          <ul id="result" class="list-unstyled"></ul>
+        </div>
+      </div>  <!-- End .flex-fill -->
+
+      <footer>
+        <p>
+          Created for <a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/roman-numeral-converter" target="_blank">freeCodeCamp</a>
+        </p>
+      </footer>
+    </div>  <!-- End .container-fluid -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

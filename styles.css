@@ -1,0 +1,11 @@
+body {
+  background: lavender;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+.author {
+  font-size: 0.7rem;
+}
