@@ -1,8 +1,15 @@
 $(function() {
   // Only allow number input, enter, and backspace
   $('input').on('keypress', function(evt) {
-    if ( !(evt.key === 'Enter' || evt.key === 'Backspace' || (evt.key >= 0 && evt.key <= 9)) ) {
+    if (evt.code === 'Space') {
       evt.preventDefault();
+    }
+
+    if (!(evt.key === 'Enter' || evt.key === 'Backspace')) {
+      if ( ($('input').val().length === 0 && !(evt.key >= 1 && evt.key <= 9)) ||  // Don't allow 0 to be first #
+        ($('input').val().length > 0 && !(evt.key >= 0 && evt.key <= 9)) ) {
+        evt.preventDefault();
+      }
     }
   });
 
