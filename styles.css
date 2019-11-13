@@ -6,6 +6,14 @@ body {
   min-height: 100vh;
 }
 
+ul {
+  list-style-type: circle;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 .author {
   font-size: 0.7rem;
 }
