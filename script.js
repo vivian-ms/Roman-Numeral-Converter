@@ -4,6 +4,10 @@ var value = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 $(function() {
   $('#romanToNumber').css('width', $('#numberToRoman').css('width'));
 
+  $(window).on('resize', function(evt) {
+    $('#romanToNumber').css('width', $('#numberToRoman').css('width'));
+  });
+
   // Don't allow space
   $('input').on('keypress', function(evt) {
     if (evt.code === 'Space') {
@@ -17,6 +21,15 @@ $(function() {
       // Don't allow 0 to be first #
       if ( ($('#numberToRoman_input').val().length === 0 && !(evt.key >= 1 && evt.key <= 9)) ||
         ($('#numberToRoman_input').val().length > 0 && !(evt.key >= 0 && evt.key <= 9)) ) {
+        evt.preventDefault();
+      }
+    }
+  });
+
+  $('#romanToNumber_input').on('keypress', function(evt) {
+    // Only allow i, v, x, l, c, d, m (case insensitive)
+    if (evt.key !== 'Enter') {
+      if (!(evt.key === 'i' || evt.key === 'v' || evt.key === 'x' || evt.key === 'l' || evt.key === 'c' || evt.key === 'd' || evt.key === 'm' || evt.key === 'I' || evt.key === 'V' || evt.key === 'X' || evt.key === 'L' || evt.key === 'C' || evt.key === 'D' || evt.key === 'M')) {
         evt.preventDefault();
       }
     }
