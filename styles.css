@@ -6,12 +6,22 @@ body {
   min-height: 100vh;
 }
 
+.form_container {
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
 ul {
   list-style-type: circle;
 }
 
 li {
   margin-bottom: 10px;
+}
+
+.roman {
+  font-family: 'Courier New';
+  font-size: 1.2rem;
 }
 
 .author {
